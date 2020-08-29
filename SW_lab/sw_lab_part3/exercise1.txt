@@ -1,0 +1,4 @@
+mosquitto_sub -h test.mosquitto.org -t "catalog/devices"
+mosquitto_pub -h test.mosquitto.org -t "catalog/devices" -m "{\"ID\": \"IoT\", \"PROT\": \"MQTT\", \"IP\": \"test.mosquitto.org\", \"P\": 1883, \"ED\": {\"S\": [\"temperature/fake_thermometer\"]}, \"AR\": [\"Temp\"]}"
+
+//da lanciare su due terminali separati in quanto la sub è bloccante
